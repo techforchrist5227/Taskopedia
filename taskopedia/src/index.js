@@ -1,6 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import Students from './Students';
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const submitButton = document.getElementById("submitButton");
+  const inputContainer = document.getElementById("inputContainer");
+  let inputCount = 1;
+
+  submitButton.addEventListener("click", function() {
+      let inputElement = document.createElement("input");
+      inputElement.setAttribute("type", "text");
+      inputElement.setAttribute("name", "input" + inputCount);
+      inputElement.setAttribute("placeholder", "Input " + inputCount);
+      inputContainer.appendChild(inputElement);
+      
+      inputCount++;
+  });
+});
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
