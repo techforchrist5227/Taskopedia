@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import Students from './Students';
 
 
 
@@ -10,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let inputCount = 1;
 
   submitButton.addEventListener("click", function() {
-      const inputElement = document.createElement("input");
+      let inputElement = document.createElement("input");
       inputElement.setAttribute("type", "text");
       inputElement.setAttribute("name", "input" + inputCount);
       inputElement.setAttribute("placeholder", "Input " + inputCount);

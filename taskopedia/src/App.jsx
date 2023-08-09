@@ -1,12 +1,16 @@
-import Header from "./Header"
-import Footer from "./Footer"
+import Header from "./Layout/Header"
+import Footer from "./Layout/Footer"
 import Students from "./Students"
+import faker from "@faker-js/faker"
+import MainBody from "./MainBody"
 
 
 
 function App() {
+  const randomNum = Math.floor(Math.random()*1000)
   const whatWeWillLearn = "React JS";
   const totalLecture = 3;
+  
   return (
     <div className="App">
       
@@ -24,7 +28,7 @@ function App() {
         </div>
         <button id="submitButton"></button>
       </body>
-      <Students/>
+      <MainBody/>
       <Footer/>
     </div>
   );
